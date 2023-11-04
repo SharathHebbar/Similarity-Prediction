@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>SkillSync | NLP-Powered Resume Parsing and Job Description Matching</title>
+</head>
+<body>
+    <nav class="bg-blue-500 p-4 flex justify-between items-center">
+        <h1 class="text-2xl font-semibold text-white">Resume Parser</h1>
+        <div class="flex space-x-4">
+            <a href="{% url 'accounts:signup' %}" class="text-white hover:text-yellow-300">Sign Up</a>
+            <a href="{% url 'accounts:login' %}" class="text-white hover:text-yellow-300">Log In</a>
+            <!-- <a href="#" class="hover:text-yellow-300">About</a> -->
+            <a href="{% url 'core:about' %}" class="text-white hover:text-yellow-300">About</a>
+        </div>
+    </nav>
+    <main class="p-6">
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer class="p-6 bg-gray-900 ">
+        <p class="text-xs text-gray-400 ">
+            Copyright (c) 2023 - SkillSync
+        </p>
+    </footer>
+</body>
+</html>
